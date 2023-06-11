@@ -33,12 +33,11 @@ exports.register = async (req, res) => {
             status: 201,
             success: true,
             data: {
+                id: user._id,
                 first_name: first_name,
                 last_name: last_name,
                 email: email,
-                token: user.token,
-                id: user._id
-
+                token: user.token
             }
         })
     }catch (err){
